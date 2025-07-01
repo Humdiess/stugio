@@ -1,9 +1,10 @@
 'use server'
 
-import { createServerClient } from '@/utils/supabase/server'
+import { createClient } from '@/utils/supabase/server'
+import { createServerClient } from '@supabase/ssr'
 
 export async function getStudyPlans() {
-  const supabase = createServerClient()
+  const supabase = await createClient()
   const { data: session } = await supabase.auth.getUser()
   const user = session.user
   if (!user) return []
@@ -19,7 +20,7 @@ export async function getStudyPlans() {
 }
 
 export async function createStudyPlan(formData: FormData) {
-  const supabase = createServerClient()
+  const supabase = await createClient()
   const { data: session } = await supabase.auth.getUser()
   const user = session.user
   if (!user) throw new Error('Not logged in')
@@ -42,6 +43,6 @@ export async function createStudyPlan(formData: FormData) {
 }
 
 export async function deleteStudyPlan(id: string) {
-  const supabase = createServerClient()
+  const supabase = await createClient()
   return await supabase.from('study_plans').delete().eq('id', id)
 }

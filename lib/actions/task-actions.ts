@@ -1,21 +1,26 @@
 'use server'
 
 import { createServerClient } from '@supabase/ssr'
+import { ReadonlyHeaders } from 'next/dist/server/web/spec-extension/adapters/headers'
 import { cookies, headers } from 'next/headers'
 
-const getSupabase = () =>
-  createServerClient(
+const getSupabase = async () =>
+  createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
     {
-      cookies: cookies(),
+      cookies: {
+        get: async (name) => (await cookies()).get(name)?.value,
+        set: async (name, value, options) => (await cookies()).set({ name, value, ...options }),
+        remove: async (name, options) => (await cookies()).set({ name, value: '', ...options }),
+      },
       headers: headers(),
     }
-  )
+  );
 
 // 📥 Ambil semua task (opsional bisa tambahkan user filter)
 export async function getTasks() {
-  const supabase = getSupabase()
+  const supabase = await getSupabase()
   const { data, error } = await supabase
     .from('study_tasks')
     .select('*')
@@ -27,7 +32,7 @@ export async function getTasks() {
 
 // ➕ Tambah task
 export async function addTask(title: string, description: string) {
-  const supabase = getSupabase()
+  const supabase = await getSupabase()
 
   const {
     data: { user },
@@ -91,3 +96,7 @@ export async function deleteStudyPlan(id: number) {
     throw new Error('Gagal menghapus plan')
   }
 }
+function createClient(arg0: string, arg1: string, arg2: { cookies: { get: (name: any) => any; set: (name: any, value: any, options: any) => any; remove: (name: any, options: any) => any }; headers: Promise<ReadonlyHeaders> }) {
+    throw new Error('Function not implemented.')
+}
+
