@@ -37,7 +37,7 @@ export const PomodoroSidebar = ({
 
   return (
     <div className="h-full bg-white/95 backdrop-blur-sm">
-      <div className="p-4 lg:p-6 space-y-4 lg:space-y-6 h-full overflow-y-auto">
+      <div className="p-4 lg:p-6 lg:pt-20 space-y-4 lg:space-y-6 h-full overflow-y-auto">
         {/* Header */}
         <div className="text-center border-b border-pink-100 pb-4">
           <h3 className="text-lg lg:text-xl font-bold text-gray-800 mb-1">Pomodoro Timer 🍅</h3>

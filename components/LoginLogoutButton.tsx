@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect, useState } from "react";
-// Update the import path if Button exists elsewhere, e.g.:
+
 import { Button } from "../components/ui/button";
-// Or, if you meant to use a library component, e.g. from 'react-bootstrap':
-// import { Button } from "react-bootstrap";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/utils/supabase/client";
 import { signout } from "@/lib/auth-actions";
+import { LogOut } from "lucide-react";
 
 const LoginButton = () => {
   const [user, setUser] = useState<any>(null);
@@ -24,24 +23,28 @@ const LoginButton = () => {
   if (user) {
     return (
       <Button
+        variant="ghost"
+        className="text-gray-600 hover:text-pink-600 hover:bg-pink-50"
         onClick={() => {
           signout();
           setUser(null);
         }}
       >
-        Log out
+        <LogOut className="w-4 h-4 mr-2" />
+        <span className="hidden sm:inline">Logout</span>
       </Button>
     );
   }
   return (
     <Button
-      variant="outline"
+      variant="ghost"
       onClick={() => {
         router.push("/login");
       }}
     >
       Login
     </Button>
+    
   );
 };
 

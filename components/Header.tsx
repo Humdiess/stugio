@@ -2,6 +2,7 @@ import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { LogOut, BookOpen, Timer } from "lucide-react"
+import LoginButton from "@/components/LoginLogoutButton";
 
 interface HeaderProps {
   sidebarOpen: boolean
@@ -35,11 +36,7 @@ export const Header = ({ sidebarOpen, setSidebarOpen, PomodoroSidebar }: HeaderP
               <PomodoroSidebar />
             </SheetContent>
           </Sheet>
-
-          <Button variant="ghost" size="sm" className="text-gray-600 hover:text-pink-600 hover:bg-pink-50">
-            <LogOut className="w-4 h-4 mr-2" />
-            <span className="hidden sm:inline">Logout</span>
-          </Button>
+            <LoginButton />
         </div>
       </div>
     </header>
