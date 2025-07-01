@@ -14,14 +14,14 @@ export const Header = ({ sidebarOpen, setSidebarOpen, PomodoroSidebar }: HeaderP
   return (
     <header className="sticky top-0 z-20 bg-white/90 backdrop-blur-md border-b border-pink-100 shadow-sm">
       <div className="container mx-auto px-4 py-3 lg:py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-3">
+        <a href="/" className="flex items-center space-x-3 cursor-pointer">
           <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full flex items-center justify-center">
             <BookOpen className="w-4 h-4 text-white" />
           </div>
           <h1 className="text-lg lg:text-xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
             Stugio
           </h1>
-        </div>
+        </a>
 
         <div className="flex items-center space-x-2">
           {/* Mobile Pomodoro Trigger */}
