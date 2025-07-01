@@ -1,4 +1,3 @@
----
 
 ```markdown
 <h1 align="center">💖 Stugio — A Soft & Simple Study Planner</h1>
@@ -138,5 +137,3 @@ Open to contributions & collab!
 > — Coquette Coder ✨
 
 ```
-
----
