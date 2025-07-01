@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+---
 
-## Getting Started
+```markdown
+<h1 align="center">💖 Stugio — A Soft & Simple Study Planner</h1>
 
-First, run the development server:
+<p align="center">
+  Plan your study goals, stay focused, and keep things cute ✨<br/>
+  Built with Next.js 15, Supabase, and Tailwind CSS.
+</p>
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Next.js-v15-black?logo=nextdotjs" />
+  <img src="https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/Shadcn--UI-Components-pink" />
+</div>
+
+---
+
+## 🌸 Apa itu Stugio?
+
+**Stugio** adalah aplikasi web lucu nan minimalis untuk membantu kamu:
+- Merancang rencana belajar
+- Mencatat target akademik
+- Tetap konsisten belajar
+
+Cocok buat pejuang UTBK, mahasiswa, atau siapa pun yang mau belajar dengan gaya **aesthetic + soft** 🎀
+
+---
+
+## 🧁 Fitur Utama
+
+- 💌 Login pakai email (OTP Magic Link)
+- 📝 Tambah & lihat daftar Study Plan (rencana belajar)
+- 🔐 Logout dan proteksi halaman otomatis
+- 🎀 Tampilan manis ala coquette (soft UI, pastel vibes)
+- 📦 Disimpan di Supabase (serverless database & auth)
+
+---
+
+## 🧪 Tech Stack
+
+| Teknologi     | Fungsi                        |
+|---------------|-------------------------------|
+| Next.js 15    | Framework React (App Router)  |
+| Supabase      | Backend, Auth, DB             |
+| Tailwind CSS  | Styling responsif             |
+| Shadcn/ui     | Komponen UI siap pakai        |
+
+---
+
+## 🚀 Cara Menjalankan Projek
+
+1. **Clone repo ini**
+
+```bash
+git clone https://github.com/username/stugio.git
+cd stugio
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Buat file `.env.local` dan isi:**
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+> Kamu bisa dapat `URL` dan `ANON KEY` dari halaman project di Supabase.
+
+4. **Jalankan server lokal**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lalu buka di browser:  
+`http://localhost:3000`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂 Struktur Folder
 
-## Learn More
+```txt
+.
+├── app/
+│   ├── auth/
+│   │   └── login/          → Halaman login
+│   └── page.tsx            → Dashboard utama
+├── components/
+│   ├── LogoutButton.tsx
+│   └── HandleLoginCallback.tsx
+├── lib/
+│   └── supabase.ts         → Inisialisasi Supabase
+├── middleware.ts           → Proteksi halaman SSR
+├── public/
+├── styles/
+├── .env.local              → Kunci rahasia Supabase
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🌷 Catatan Tambahan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 🔐 Halaman utama (`/`) hanya bisa diakses kalau sudah login
+- 📥 Supabase otomatis membuat akun saat login pertama
+- 📡 Semua data tersimpan di Supabase (secure + real-time)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📸 Screenshot (opsional)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> Kamu bisa tambahkan gambar tampilan app di sini nanti.
+
+---
+
+## 🧠 Rencana Fitur Selanjutnya
+
+- Progress tracker (% belajar selesai)
+- Reminder belajar
+- Versi Android (pakai database yang sama)
+
+---
+
+## 👩🏻‍💻 Author
+
+Made with 💕 by [Your Name Here]  
+Open to contributions & collab!
+
+---
+
+> _"Stay soft, even when you're building hard things."_  
+> — Coquette Coder ✨
+
+```
+
+---
