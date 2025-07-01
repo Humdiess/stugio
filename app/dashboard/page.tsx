@@ -7,7 +7,6 @@ import { StudyPlanCard } from "@/components/StudeyPlanCard"
 import { PomodoroSidebar } from "@/components/PomodoroSidebar"
 import { usePomodoro } from "@/hooks/usePomodoro"
 import { useStudyPlans } from "@/hooks/useStudyPlans"
-import AddStudyPlanForm from '@/components/AddStudyPlanForm'
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
