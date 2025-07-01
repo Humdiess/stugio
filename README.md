@@ -34,3 +34,63 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+```
+stugio
+├─ app
+│  ├─ (auth)
+│  │  ├─ auth
+│  │  │  └─ confirm
+│  │  │     └─ route.ts
+│  │  ├─ login
+│  │  │  ├─ components
+│  │  │  │  ├─ LoginForm.tsx
+│  │  │  │  ├─ SignUpForm.tsx
+│  │  │  │  └─ SingInWithGoogleButton.tsx
+│  │  │  └─ page.tsx
+│  │  └─ logout
+│  │     └─ page.tsx
+│  ├─ dashboard
+│  │  └─ page.tsx
+│  ├─ error
+│  │  └─ page.tsx
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ hooks
+│  ├─ layout.tsx
+│  └─ page.tsx
+├─ components
+│  ├─ LoginLogoutButton.tsx
+│  ├─ ui
+│  │  ├─ badge.tsx
+│  │  ├─ button.tsx
+│  │  ├─ card.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ progress.tsx
+│  │  └─ sheet.tsx
+│  └─ UserGreetText.tsx
+├─ components.json
+├─ lib
+│  ├─ auth-actions.ts
+│  └─ utils.ts
+├─ middleware.ts
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ next.svg
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ README.md
+├─ tsconfig.json
+└─ utils
+   └─ supabase
+      ├─ client.ts
+      ├─ middleware.ts
+      └─ server.ts
+
+```
