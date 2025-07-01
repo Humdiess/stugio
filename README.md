@@ -107,3 +107,77 @@ Lalu buka di browser:
 
 Made with 💕 by Humdiee  
 Open to contributions & collab!
+
+```
+stugio
+├─ app
+│  ├─ (auth)
+│  │  ├─ auth
+│  │  │  └─ confirm
+│  │  │     └─ route.ts
+│  │  ├─ login
+│  │  │  ├─ components
+│  │  │  │  ├─ LoginForm.tsx
+│  │  │  │  ├─ SignUpForm.tsx
+│  │  │  │  └─ SingInWithGoogleButton.tsx
+│  │  │  └─ page.tsx
+│  │  └─ logout
+│  │     └─ page.tsx
+│  ├─ dashboard
+│  │  └─ page.tsx
+│  ├─ error
+│  │  └─ page.tsx
+│  ├─ favicon.ico
+│  ├─ globals.css
+│  ├─ hooks
+│  ├─ layout.tsx
+│  └─ page.tsx
+├─ components
+│  ├─ Header.tsx
+│  ├─ LoginLogoutButton.tsx
+│  ├─ PomodoroSidebar.tsx
+│  ├─ StudeyPlanCard.tsx
+│  ├─ ui
+│  │  ├─ badge.tsx
+│  │  ├─ button.tsx
+│  │  ├─ card.tsx
+│  │  ├─ input.tsx
+│  │  ├─ label.tsx
+│  │  ├─ progress.tsx
+│  │  └─ sheet.tsx
+│  ├─ UserGreetText.tsx
+│  └─ WelcomeSection.tsx
+├─ components.json
+├─ constants
+│  └─ studyPlans.ts
+├─ hooks
+│  └─ usePomodoro.ts
+├─ lib
+│  ├─ actions
+│  │  └─ task-actions.ts
+│  ├─ auth-actions.ts
+│  └─ utils.ts
+├─ middleware.ts
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ public
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ next.svg
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ README.md
+├─ tsconfig.json
+├─ types
+│  └─ pomodoro.ts
+└─ utils
+   ├─ pomodoroUtils.ts
+   ├─ supabase
+   │  ├─ client.ts
+   │  ├─ middleware.ts
+   │  └─ server.ts
+   └─ timeUtils.ts
+
+```

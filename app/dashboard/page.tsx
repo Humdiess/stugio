@@ -6,11 +6,14 @@ import { WelcomeSection } from "@/components/WelcomeSection"
 import { StudyPlanCard } from "@/components/StudeyPlanCard"
 import { PomodoroSidebar } from "@/components/PomodoroSidebar"
 import { usePomodoro } from "@/hooks/usePomodoro"
-import { STUDY_PLANS } from "@/constants/studyPlans"
+import { useStudyPlans } from "@/hooks/useStudyPlans"
+import AddStudyPlanForm from '@/components/AddStudyPlanForm'
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const pomodoroState = usePomodoro()
+  const { plans, loading } = useStudyPlans()
+
 
   const PomodoroSidebarComponent = () => <PomodoroSidebar {...pomodoroState} />
 
@@ -30,11 +33,18 @@ export default function Dashboard() {
                 Study Plans Kamu ✨
               </h3>
 
+            {loading ? (
+              <p className="text-center text-sm text-gray-500">Loading study plans...</p>
+            ) : plans.length ? (
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
-                {STUDY_PLANS.map((plan) => (
+                {plans.map((plan) => (
                   <StudyPlanCard key={plan.id} plan={plan} />
                 ))}
               </div>
+            ) : (
+              <p className="text-center text-sm text-gray-500">Belum ada study plan. Yuk               tambah dulu! 💕</p>
+            )}
+
             </div>
 
             {/* Empty State Message */}
