@@ -81,27 +81,6 @@ Lalu buka di browser:
 
 ---
 
-## 🗂 Struktur Folder
-
-```txt
-.
-├── app/
-│   ├── auth/
-│   │   └── login/          → Halaman login
-│   └── page.tsx            → Dashboard utama
-├── components/
-│   ├── LogoutButton.tsx
-│   └── HandleLoginCallback.tsx
-├── lib/
-│   └── supabase.ts         → Inisialisasi Supabase
-├── middleware.ts           → Proteksi halaman SSR
-├── public/
-├── styles/
-├── .env.local              → Kunci rahasia Supabase
-```
-
----
-
 ## 🌷 Catatan Tambahan
 
 - 🔐 Halaman utama (`/`) hanya bisa diakses kalau sudah login
@@ -126,12 +105,5 @@ Lalu buka di browser:
 
 ## 👩🏻‍💻 Author
 
-Made with 💕 by [Your Name Here]  
+Made with 💕 by Humdiee  
 Open to contributions & collab!
-
----
-
-> _"Stay soft, even when you're building hard things."_  
-> — Coquette Coder ✨
-
-```
