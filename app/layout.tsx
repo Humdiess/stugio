@@ -7,12 +7,12 @@ export const metadata = {
   title: "Stugio — Study Planner Aesthetic & Produktif 🎀",
   description:
     "Stugio adalah aplikasi belajar coquette-style untuk bantu kamu atur rencana belajar, fokus dengan Pomodoro, dan catat progres kamu 💖",
-  metadataBase: new URL("https://your-vercel-app.vercel.app"), // ganti dengan domain kamu
+  metadataBase: new URL("https://stugio.app"), // ganti dengan domain kamu
   openGraph: {
     title: "Stugio — Study Planner Aesthetic & Produktif 🎀",
     description:
       "Aplikasi belajar coquette-style: rencana belajar, Pomodoro, dan progress tracker ✨",
-    url: "https://your-vercel-app.vercel.app",
+    url: "https://stugio.vercel.app",
     siteName: "Stugio",
     images: [
       {
